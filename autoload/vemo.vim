@@ -12,7 +12,7 @@ set cpo&vim
 function! vemo#vemo()
   vsplit
   e ./Dropbox/vemo/vemo.md
-  set nohlsearch
+  setl nohlsearch
   nnoremap j1 /[[1]]<CR>
   nnoremap j2 /[[2]]<CR>
   nnoremap j3 /[[3]]<CR>

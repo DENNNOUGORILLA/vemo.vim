@@ -12,7 +12,7 @@ set cpo&vim
 function! vemo#vemo()
   vsplit
   e ./Dropbox/vemo/vemo.md
-  nnoremap j1 /{{1}}
+  nnoremap j1 /[[1]]<CR>
 endfunction
 
 let &cpo = s:save_cpo

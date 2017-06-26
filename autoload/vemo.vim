@@ -11,6 +11,7 @@ set cpo&vim
 
 function! vemo#vemo()
   vsplit
+  setl noh
   e ./Dropbox/vemo/vemo.md
   nnoremap j1 /[[1]]<CR>
   nnoremap j2 /[[2]]<CR>

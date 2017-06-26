@@ -1,3 +1,4 @@
+"autoload
 scriptencoding utf-8
 
 if !exists('g:loaded_vemo')
@@ -9,7 +10,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! vemo#vemo()
-  echo "Hello vemo"
+  vsplit
 endfunction
 
 let &cpo = s:save_cpo

@@ -11,7 +11,7 @@ set cpo&vim
 
 function! vemo#vemo()
   vsplit
-  e test.txt
+  e **/vemo/vemo.txt
 endfunction
 
 let &cpo = s:save_cpo

@@ -13,26 +13,26 @@ function! vemo#vemo()
   vsplit
   e ./Dropbox/vemo/vemo.md
   setl nohlsearch
-  command! j1 /[[1]]<CR>
-  command! j2 /[[2]]<CR>
-  command! j3 /[[3]]<CR>
-  command! j4 /[[4]]<CR>
-  command! j5 /[[5]]<CR>
-  command! j6 /[[6]]<CR>
-  command! j7 /[[7]]<CR>
-  command! j8 /[[8]]<CR>
-  command! j9 /[[9]]<CR>
-  command! j10 /[[10]]<CR>
-  command! j11 /[[11]]<CR>
-  command! j12 /[[12]]<CR>
-  command! j13 /[[13]]<CR>
-  command! j14 /[[14]]<CR>
-  command! j15 /[[15]]<CR>
-  command! j16 /[[16]]<CR>
-  command! j17 /[[17]]<CR>
-  command! j18 /[[18]]<CR>
-  command! j19 /[[19]]<CR>
-  command! j20 /[[20]]<CR>
+  nnoremap <C-j>1 /[[1]]<CR>
+  nnoremap <C-j>2 /[[2]]<CR>
+  nnoremap <C-j>3 /[[3]]<CR>
+  nnoremap <C-j>4 /[[4]]<CR>
+  nnoremap <C-j>5 /[[5]]<CR>
+  nnoremap <C-j>6 /[[6]]<CR>
+  nnoremap <C-j>7 /[[7]]<CR>
+  nnoremap <C-j>8 /[[8]]<CR>
+  nnoremap <C-j>9 /[[9]]<CR>
+  nnoremap <C-j>10 /[[10]]<CR>
+  nnoremap <C-j>11 /[[11]]<CR>
+  nnoremap <C-j>12 /[[12]]<CR>
+  nnoremap <C-j>13 /[[13]]<CR>
+  nnoremap <C-j>14 /[[14]]<CR>
+  nnoremap <C-j>15 /[[15]]<CR>
+  nnoremap <C-j>16 /[[16]]<CR>
+  nnoremap <C-j>17 /[[17]]<CR>
+  nnoremap <C-j>18 /[[18]]<CR>
+  nnoremap <C-j>19 /[[19]]<CR>
+  nnoremap <C-j>20 /[[20]]<CR>
 endfunction
 
 let &cpo = s:save_cpo

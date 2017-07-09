@@ -1,5 +1,5 @@
-# vemo.vim   
+# vemo.vim      
 This is memo for vim. It is saved in ./Dropbox/vemo/vemo.md
 
-## Commands     
+## Commands        
 <C-j>**** jump to index[[*]]

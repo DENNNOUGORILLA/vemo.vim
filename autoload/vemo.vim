@@ -10,14 +10,16 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! vemo#vemo()
-
+    
+    au FileType vim setlocal foldmethod=marker 
+    au BufRead,BufNewFile *.md set filetype=markdown
     vsplit
     lcd 
     edit ~/Dropbox/vemo/vemo.md
     setl nohlsearch
 
     for i in range(1,20)
-        nnoremap <C-j>i /[[i]]<CR>
+        nnoremap <C-j>&i /[[&i]]<CR>
     endfor
 
 endfunction

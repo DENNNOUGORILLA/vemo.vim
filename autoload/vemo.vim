@@ -8,14 +8,21 @@ let g:loaded_vemo = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! vemo#vemo()
-    
-    au FileType vim setlocal foldmethod=marker 
-    au BufRead,BufNewFile *.md set filetype=markdown
+function! vemo#vemo(...)
+    if a:0 >= 1
+        if a:000==['-v']
+            vsplit
+        elseif a:000==['-t']
+            tabnew
+        endif
+    else
+        split
+    endif
 
-    vsplit
     lcd 
     edit ~/Dropbox/vemo/vemo.md
+    "au FileType vim setlocal foldmethod=marker 
+    "au BufRead,BufNewFile *.md setlocal filetype=markdown
     setl nohlsearch
 
     nnoremap <buffer> <C-j>1 /[[1]]<CR>

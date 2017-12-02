@@ -5,7 +5,6 @@ if !exists('g:loaded_vemo')
     finish
 endif
 let g:loaded_vemo = 1
-
 let s:save_cpo = &cpo
 set cpo&vim
 
@@ -17,10 +16,7 @@ function! vemo#vemo()
     lcd 
     edit ~/Dropbox/vemo/vemo.md
     setl nohlsearch
-
-    for i in range(1,20)
-        nnoremap <C-j>&i /[[&i]]<CR>
-    endfor
+    command -nargs=1 Jumpindex :/[[<args>]].
 
 endfunction
 

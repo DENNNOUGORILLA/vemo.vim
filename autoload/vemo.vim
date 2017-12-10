@@ -15,16 +15,19 @@ function! vemo#vemo(...)
             vsplit
         elseif a:000==['-t']
             tabnew
+        elseif a:000==['-p']
+            
         endif
     else
         split
     endif
 
+    let g:VEMO_WINDOWS_PATH = '/mnt/c/Users/DnGorilla/Dropbox/vemo/'
     "for windows
     try
         lcd ~/Dropbox/vemo/
     catch
-        lcd /mnt/c/Users/DnGorilla/Dropbox/vemo/
+        lcd g:VEMO_WINDOWS_PATH
     endtry
 
     edit vemo.md

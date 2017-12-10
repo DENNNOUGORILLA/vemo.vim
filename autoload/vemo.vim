@@ -9,6 +9,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! vemo#vemo(...)
+    "option
     if a:0 >= 1
         if a:000==['-v']
             vsplit
@@ -19,13 +20,14 @@ function! vemo#vemo(...)
         split
     endif
 
-    lcd 
-    if has('win64')
-        edit ~/mnt/c/Users/DnGorilla/Dropbox/vemo/vemo.md
-    else
-        edit ~/Dropbox/vemo/vemo.md
-    endif
+    "for windows
+    try
+        lcd ~/Dropbox/vemo/
+    catch
+        lcd ~/mnt/c/Users/DnGorilla/Dropbox/vemo/
+    endtry
 
+    edit vemo.md
     au FileType vim setlocal foldmethod=marker 
     au BufRead,BufNewFile *.md setlocal filetype=markdown
     setl nohlsearch

@@ -20,9 +20,14 @@ function! vemo#vemo(...)
     endif
 
     lcd 
-    edit ~/Dropbox/vemo/vemo.md
-    "au FileType vim setlocal foldmethod=marker 
-    "au BufRead,BufNewFile *.md setlocal filetype=markdown
+    if has('win64')
+        edit ~/mnt/c/Users/DnGorilla/Dropbox/vemo/vemo.md
+    else
+        edit ~/Dropbox/vemo/vemo.md
+    endif
+
+    au FileType vim setlocal foldmethod=marker 
+    au BufRead,BufNewFile *.md setlocal filetype=markdown
     setl nohlsearch
 
     nnoremap <buffer> <C-j>1 /[[1]]<CR>

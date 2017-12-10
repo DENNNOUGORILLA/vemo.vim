@@ -24,7 +24,7 @@ function! vemo#vemo(...)
     try
         lcd ~/Dropbox/vemo/
     catch
-        lcd ~/mnt/c/Users/DnGorilla/Dropbox/vemo/
+        lcd /mnt/c/Users/DnGorilla/Dropbox/vemo/
     endtry
 
     edit vemo.md
